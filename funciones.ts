@@ -37,4 +37,22 @@ function saludar3(person: { name: string; age: number }) {
 }
 
 const person = { name: "Pepe", age: 23 };
-saludar3(person); // ✅ 
+saludar3(person); // ✅
+
+// Retorno de funciones
+function suma(a: number, b: number): number {
+  // Retorna un number
+  return a + b;
+}
+
+// Igualmente, Ts tiene inferencia de retorno
+
+// Funciones como parámetros y tipado de funciones
+const sayHiFromFunction = (fn: (name: string) => void) => {
+  return fn("Hola el pepe");
+};
+
+sayHiFromFunction((message: string) => {
+  console.log(message);
+});
+ 
